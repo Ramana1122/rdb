@@ -1,111 +1,55 @@
 <div class="ram">
-
-  <div class="container">
-
-    <div class="row justify-content-center">
-
-      <div class="col-md-10" style="margin-right : 125px">
-
-
-
-
-       <div class="card ">
-
-          <div class="card-header backhead">
-
-            <h4 class="card-title">{{ employeeData.EmployeeName }}</h4>
-
-         </div>
-
-         <div class="card-body">
-
-           <div class="row">
-
-              <div class="col-md-6">
-
-                <p>Employee ID</p>
-
-                <p>Employee Name</p>
-
-               <p>Manager Name</p>
-
-              </div>
-
-              <div class="col-md-6">
-
-                <div class="A">
-
-                  <p>{{ employeeData.EmployeeCode }}</p>
-
-                  <p>{{ employeeData.EmployeeName }}</p>
-
-                  <p>{{ employeeData.ManagerName }}</p>
-
-                </div>
-
-              </div>
-
+<div class="container">
+  <div class="row1 justify-content-center">
+    <div class="col-md-10" style="margin-right : 125px">
+     <div class="card ">
+        <div class="card-header backhead">
+          <h4 class="card-title">{{ employeeData.EmployeeName }}</h4>
+       </div>
+       <div class="card-body">
+         <div class="row1">
+            <div class="col-md-6">
+              <p>Employee ID</p>
+              <p>Employee Name</p>
+             <p>Manager Name</p>
             </div>
-
+            <div class="col-md-6">
+              <div class="A">
+                <p>{{ employeeData.EmployeeCode }}</p>
+                <p>{{ employeeData.EmployeeName }}</p>
+                <p>{{ employeeData.ManagerName }}</p>
+              </div>
+            </div>
           </div>
-
         </div>
-
       </div>
-
     </div>
+  </div>
+</div>  
+</div>
+<div class="container1">
+  
+  <div style="display: flex; justify-content: center;margin-left: 120vh;">
 
-  </div>  
-
-  <div class="container1 ">
-
-   <div class="cont">
-
-    <h4 class="peer ">My Peers</h4>
-    <div style="display: flex; justify-content: center;margin-left: 120vh;">
-      <button (click)="downloadEmployeeDetails()" class="btn btn-primary btn-sm"><i class="fas fa-print"></i></button>
-    </div>
-
-    <div class="scroll">
-
-    <table class="table table-bordered table-striped" >
-
-      <thead style="position: sticky">
-
-        <tr>
-
-          <th class="header backhead">Employee Name</th>
-
-          <th class="header backhead">Mail Id</th>
-
-          <th class="header backhead">Details</th>
-
-        </tr>
-
-      </thead>
-
-      <tbody>
-
-        <tr *ngFor="let employee of employeeData3 | team:employeeData.EmployeeName">
-
-          <td>{{ employee['EmployeeName'] }}</td>
-
-          <td>{{ employee['Employee_MailId'] }}</td>
-
-         <td>
-          <div style="display: flex; justify-content: center;">
-            <button (click)="openpop(employee['EmployeeCode'])" class="btn btn-primary btn-sm"><i class="fa-solid fa-eye"></i></button>
-          </div>
-          </td>
-
-        </tr>
-
-         </tbody>
-
-    </table>
+    <button (click)="downloadEmployeeDetails()" class="btn btn-primary btn-sm"><i class="fas fa-print"></i></button>
 
   </div>
-
+  <H4>My Peers</H4>
+  <div class="row header-row">
+    <div class="col-md-4 header">Employee Name</div>
+    <div class="col-md-4 header">Mail Id</div>
+    <div class="col-md-4 head" style="padding-left: 100px;">Details</div>
   </div>
 
+  <div class="scroll">
+    <div class="row" *ngFor="let employee of employeeData3 | team:employeeData.EmployeeName">
+      <div class="col-md-4">{{ employee['EmployeeName'] }}</div>
+      <div class="col-md-4">{{ employee['Employee_MailId'] }}</div>
+      <div class="col-md-4">
+        <div class="button-wrapper">
+          <button (click)="openpop(employee['EmployeeCode'])" class="btn btn-primary btn-sm"><i class="fa-solid fa-eye"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
