@@ -1,0 +1,202 @@
+.dropdown-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+ 
+
+    margin-top : 25px
+
+  }
+
+ 
+
+  .results-container{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top : -275px
+
+  }
+
+ 
+
+  .dropdown-container select {
+
+    /* Customize the appearance of the dropdown box here */
+
+    width: 250px;
+
+    padding: 10px;
+
+    font-size: 18px;
+
+  }
+
+ 
+
+  .container1 {
+
+    max-width: 800px;
+
+    margin: 15px auto;
+
+    margin-left: 300px;
+
+    margin-top: 300px;
+
+  }
+
+ 
+
+  .table {
+
+    border-collapse: collapse;
+
+    width: 80%;
+
+  }
+
+ 
+
+  th, td {
+
+    padding: 8px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #ddd;
+
+  }
+
+ 
+
+  th {
+
+    background-color: rgb(50, 122, 169);
+
+    color: white;
+
+  }
+
+ 
+
+  tbody tr:hover {
+
+    background-color: #f5f5f5;
+
+  }
+
+ 
+
+  h5{
+
+    padding-right: 15px;
+
+  }
+
+ 
+
+  .header-column{
+
+    background-color: rgb(50, 122, 169);
+
+    color: white;
+
+  }
+
+ 
+
+  .header-column {
+
+    padding: 8px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #ddd;
+
+  }
+
+ 
+
+  .data-column{
+
+    padding: 8px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #ddd;
+
+  }
+
+ 
+
+  .row {
+
+    margin-bottom: 0;
+
+  }
+
+ 
+
+  .rasam{
+
+    margin-top: 95px;
+
+    padding-bottom: 0px;
+
+    margin-left: 240px;
+
+    margin-right: 240px;
+
+   
+
+    /* background-color: rgb(50, 122, 169); */
+
+  }
+
+ 
+
+  .title{
+
+    background-color: rgb(50, 122, 169);
+
+    color: white;
+
+    text-align: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 45px;
+
+   
+
+  }
+
+ 
+
+  /* .row{
+
+    background-color: rgb(50, 122, 169);
+
+  } */
+
+
+
+
+
+
+
+
+ 

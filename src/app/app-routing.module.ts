@@ -14,6 +14,7 @@ import { MydetailsComponent } from './mydetails/mydetails.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { AdminComponent } from './admin/admin.component';
 import { ReportComponent } from './report/report.component';
+import { HistoryComponent } from './history/history.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -31,6 +32,7 @@ const routes: Routes = [
     { path: 'employeedetails', component: EmployeeDetailComponent },
     { path: 'employee-details', component: EmployeeDetailsComponent },
     { path: 'mydetails', component: MydetailsComponent },
+    { path: 'hist', component: HistoryComponent },
     {path:'side-nav', component:SideNavComponent},
   ] },
   { path: '**', redirectTo: 'login' }, // Redirect to login page for unknown routes

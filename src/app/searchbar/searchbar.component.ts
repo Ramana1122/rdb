@@ -106,4 +106,12 @@ export class SearchbarComponent implements OnInit {
     document.body.removeChild(a);
     window.URL.revokeObjectURL(url);
   }
+
+  openpop2(employee:any) {
+
+    sessionStorage.setItem("hempId",employee.EmployeeCode);
+
+    this.router.navigateByUrl('/admin/hist');
+
+  }
 }

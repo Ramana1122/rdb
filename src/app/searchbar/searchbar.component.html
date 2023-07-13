@@ -43,6 +43,10 @@
           <th style="background-color: rgb(50, 122, 169);color: white;">Email ID</th>
 
           <th style="background-color: rgb(50, 122, 169);color: white;">Details</th>
+          
+          
+          <th style="background-color: rgb(50, 122, 169);color: white;">History</th>
+
 
         </tr>
 
@@ -64,8 +68,11 @@
 
               <div style="display: flex; justify-content: center;">
               <a (click)="navigateToEmployeeDetails(employee)" #employee class="btn btn-primary btn-sm" style="background-color:rgb(50, 122, 169) ;"><i class="fa-solid fa-eye"></i></a>
+
               </div>
             </td>
+
+            <td><a (click)="openpop2(employee)" #employee class="btn btn-primary btn-sm" style="background-color:rgb(50, 122, 169) ;">View History</a></td>
 
           </tr>
 

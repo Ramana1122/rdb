@@ -27,6 +27,7 @@ import { DatePipe } from '@angular/common';
 import { server } from './services/allservers';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { ReportComponent } from './report/report.component';
+import { HistoryComponent } from './history/history.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { ReportComponent } from './report/report.component';
     MydetailsComponent,
     LoginComponent,
     AdminComponent,
-    ReportComponent
+    ReportComponent,
+    HistoryComponent
   
    ], 
   imports: [
