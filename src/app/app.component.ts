@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { server } from './services/allservers';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Rdb';
+  title = 'Project1';
+  sideNavStatus:boolean=false;
+  toggleSideNav() {
+    this.sideNavStatus = !this.sideNavStatus;
+  }
+constructor(
+    public serverService: server
+  ) {}
+  ngOnInit():void{
+    this.serverService.getJonsurl();
+  }
 }
