@@ -10,7 +10,7 @@
 
       <ul class="nav-list" [ngClass]="{'nav-list-open': sideNavStatus}">
 
-        <li class="nav-list-items"[routerLink]="['/admin']"data-bs-toggle="tooltip" data-bs-placement="right" title= "home" >
+        <li class="nav-list-items"[routerLink]="['/admin']"data-bs-toggle="tooltip" data-bs-placement="right" title= "Home" >
 
           <i class="{{list[0].icon1}}"></i>
 
@@ -22,7 +22,7 @@
 
         </li>
 
-        <li class="nav-list-items" [routerLink]="['/admin/mydetails']" routerLinkActive='active'data-bs-toggle="tooltip" data-bs-placement="right" title= "My-Details">
+        <li class="nav-list-items" [routerLink]="['/admin/mydetails']" routerLinkActive='active'data-bs-toggle="tooltip" data-bs-placement="right" title= "My-details">
 
           <i class="{{list[1].icon2}}"></i>
 
@@ -34,7 +34,7 @@
 
         </li>
 
-        <li class="nav-list-items"[routerLink]="['/admin/my-team']"routerLinkActive='active'data-bs-toggle="tooltip" data-bs-placement="right" title= "my-team">
+        <li class="nav-list-items"[routerLink]="['/admin/my-team']"routerLinkActive='active'data-bs-toggle="tooltip" data-bs-placement="right" title= "My-team">
 
           <i class="{{list[2].icon3}}"></i>
 
@@ -72,7 +72,7 @@
 
         </li>
 
-        <li class="nav-list-items"[routerLink]="['/admin/searchbar']"routerLinkActive='active'data-bs-toggle="tooltip" data-bs-placement="right" title= "search-bar" >
+        <li class="nav-list-items"[routerLink]="['/admin/searchbar']"routerLinkActive='active'data-bs-toggle="tooltip" data-bs-placement="right" title= "Search-bar" >
 
           <i class="{{list[5].icon6}}"></i>
 
@@ -83,6 +83,14 @@
           </span>
 
         </li>
+        <li class="nav-list-items"[routerLink]="['/admin/reports']"routerLinkActive='active'data-bs-toggle="tooltip" data-bs-placement="right" title= "search-bar">
+
+          <i class="{{list[6].icon7}}"></i>
+            <span>
+              <a  >{{list[6].name7 }}</a>
+            </span>
+  
+          </li>
 
         <li class="nav-list-items2">
 

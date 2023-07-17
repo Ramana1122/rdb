@@ -217,7 +217,7 @@ export class PopComponent implements OnInit {
 
 
 
-    private http: HttpClient, private popser: PopService, private toaster: ToastrService, private serverService: server, private router: ActivatedRoute, private log: LogService) { }
+    private http: HttpClient, private popser: PopService, private toaster: ToastrService, private serverService: server, private router: ActivatedRoute, private log: LogService,public dataSer:server) { }
 
 
 
@@ -728,7 +728,7 @@ export class PopComponent implements OnInit {
 
 
 
-
+    this.dataSer.setProfileObs(true);
 
 
 

@@ -41,6 +41,16 @@ nav{
     margin-left: 5px;
 }
 
+.name.break-word{
+    white-space: normal;
+
+}
+.btn{
+    margin-right: 34px;
+    margin-bottom: 16px;
+
+}
+
 
 
 

@@ -1,8 +1,15 @@
+.ram{
+  margin-left:55px;
+  
+}
+
+
 .container {
-  margin-left: 220px;
-  margin-top: 80px;
+  
+  margin-top: 70px;
   max-height:80vh;
   width: 80%;
+  margin-left: 20px;
 }
 
 .card {
@@ -16,6 +23,7 @@
   border: 1px solid rgb(50, 122, 169);
   border-radius: 5px;
   background-color: rgb(50, 122, 169);
+  height: 68px;
 }
 
 .classRow {
@@ -133,7 +141,7 @@
   margin-right: 20px;
 }
 .container1{
-    height: 400px;
+    height: 450px;
     padding-top: 41px;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -171,4 +179,10 @@ padding-left: 35px;
   width: 20px;
   left: 8px;
   top: 4px;
+}
+.buto{
+  display: flex;
+  justify-content: end;
+  margin-right: 50vh;
+  margin-top: 5px;
 }

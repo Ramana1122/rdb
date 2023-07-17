@@ -46,6 +46,15 @@ export class SideNavComponent implements OnInit {
     name6:'Search',
     icon6:'fa-solid fa-magnifying-glass',
     disable:false
+  },
+  {
+
+    number:'7',
+
+    name7:'Reports',
+
+    icon7:'fa-regular fa-file-lines'
+
   }
 
 ]

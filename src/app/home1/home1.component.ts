@@ -4,6 +4,7 @@ import {  Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { DatePipe, formatDate } from '@angular/common';
+import { server } from '../services/allservers';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class Home1Component implements OnInit {
   dateString:string='';
   myDetails:boolean = false;
 
-  constructor(private employeeService: EmpDataService,private datePipe: DatePipe,private router: Router) {
+  constructor(private employeeService: EmpDataService,private datePipe: DatePipe,private router: Router,public dataSer:server) {
    }
   ngOnInit(): void {
    this.employeeId = this.employeeService.getId();
@@ -38,5 +39,6 @@ export class Home1Component implements OnInit {
         console.error(error);
       }
     )}
+    this.dataSer.setProfileObs(true);
   }
 }

@@ -3,6 +3,7 @@ import { EmployeeService } from '../services/employee.service';
 import { Router } from '@angular/router';
 import { EmpDataService } from '../services/emp-data.service';
 import * as XLSX from 'xlsx';
+import { server } from '../services/allservers';
 
 @Component({
   selector: 'app-report',
@@ -19,7 +20,8 @@ export class ReportComponent implements OnInit {
   constructor(
     private employeeService: EmployeeService,
     private router: Router,
-    private empService: EmpDataService
+    private empService: EmpDataService,
+    public dataSer:server
   ) {}
 
   ngOnInit(): void {
@@ -49,6 +51,7 @@ export class ReportComponent implements OnInit {
         }
       );
     }
+    this.dataSer.setProfileObs(true);
   }
 
   downloadEmployeeDetails(): void {

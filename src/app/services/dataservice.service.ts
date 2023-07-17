@@ -41,5 +41,9 @@ export class DataService {
   getDetails(OID: any) {
     return this.http.get<Employee>(this.serverService.ServerUrls+'employee/' + OID);
   }
-  
+  getDetails1(OID: any) {
+
+    return this.http.get<Employee>("http://nhsappchna6210.cscidp.net/rdb/api/employee/"+ OID);
+
+  }
 }

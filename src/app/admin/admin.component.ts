@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { EmpDataService } from '../services/emp-data.service';
+import { server } from '../services/allservers';
 
 @Component({
   selector: 'app-admin',
@@ -13,12 +14,19 @@ export class AdminComponent {
     this.sideNavStatus = !this.sideNavStatus;
   }
   
-  constructor(private employeeService: EmpDataService) { 
+  constructor(private employeeService: EmpDataService,public dataCom:server) { 
 
   }
 
   
   ngOnInit(): void {
+    this.dataCom.getProfileObs().subscribe((data: any) => {
+      console.log('data' + JSON.stringify(data));
+      if(this.sideNavStatus){
+         this.toggleSideNav();
+      }
+    });
+
     this.userName=this.employeeService.getName();
     console.log("jhjl",this.userName)
   }

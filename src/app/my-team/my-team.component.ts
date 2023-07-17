@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { forkJoin } from 'rxjs';
 import { EmpDataService } from '../services/emp-data.service';
 import * as XLSX from 'xlsx';
+import { server } from '../services/allservers';
 
 @Component({
   selector: 'app-my-team',
@@ -12,6 +13,7 @@ import * as XLSX from 'xlsx';
   styleUrls: ['./my-team.component.css']
 })
 export class MyTeamComponent implements OnInit {
+  showPrintButton:boolean=true;
   Employees: any;
   selectedEmployee: any;
   currentUser:any;
@@ -29,7 +31,7 @@ export class MyTeamComponent implements OnInit {
   employeeData3:any;
   employeeId1: any;
 
-constructor(private employeeService: EmployeeService,private router: Router,private empservice : EmpDataService) { 
+constructor(private employeeService: EmployeeService,private router: Router,private empservice : EmpDataService,public dataSer:server) { 
    
 }
 
@@ -38,6 +40,7 @@ ngOnInit(): void {
   this.employeeId1 =  this.empservice.getId()// 1553640; 
 
   ///////////////////////for merge
+
  
 
 if(this.employeeId1=="" ){
@@ -58,7 +61,7 @@ if(this.employeeId1=="" ){
 
      (data) => {
 
-       console.log('Data:', data);
+       console.log('Logger api Data:', data);
 
        this.employeeData = data[0];
 
@@ -85,6 +88,7 @@ if(this.employeeId1=="" ){
    );
 
   }
+  this.dataSer.setProfileObs(true);
  
 } 
 

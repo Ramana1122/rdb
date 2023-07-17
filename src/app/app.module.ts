@@ -28,6 +28,8 @@ import { server } from './services/allservers';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { ReportComponent } from './report/report.component';
 import { HistoryComponent } from './history/history.component';
+import { ReportsComponent } from './reports/reports.component';
+import { ActiveComponent } from './active/active.component';
 
 
 @NgModule({
@@ -48,7 +50,9 @@ import { HistoryComponent } from './history/history.component';
     LoginComponent,
     AdminComponent,
     ReportComponent,
-    HistoryComponent
+    HistoryComponent,
+    ReportsComponent,
+    ActiveComponent
   
    ], 
   imports: [

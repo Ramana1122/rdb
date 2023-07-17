@@ -3,6 +3,7 @@ import { EmployeeService, Employee } from '../services/employee.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import * as XLSX from 'xlsx';
+import { server } from '../services/allservers';
 
 @Component({
   selector: 'app-searchbar',
@@ -21,10 +22,13 @@ export class SearchbarComponent implements OnInit {
   constructor(
     private employeeService: EmployeeService,
     private router: Router,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    public dataSer:server
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.dataSer.setProfileObs(true);
+   }
 
   change() {
     if (this.searchQuery.length >= 3) {
@@ -84,9 +88,9 @@ export class SearchbarComponent implements OnInit {
 
   downloadEmployeeDetails(): void {
     const selectedData = this.employees.map((employee: Employee) => ({
-      'Employee Name': employee.EmployeeName,
-      'Job Role': employee.HLRole,
-      'Email ID': employee.Employee_MailId
+      'Employee Name': { v: employee.EmployeeName, s: { font: { bold: true } } },
+              'Job Role': { v: employee.HLRole, s: { font: { bold: true } } },
+              'Email ID': { v: employee.Employee_MailId, s: { font: { bold: true } } }
     }));
 
     const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(selectedData);

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EmpDataService } from '../services/emp-data.service';
 import { Router } from '@angular/router';
 import { DatePipe } from '@angular/common';
+import { server } from '../services/allservers';
 
 @Component({
   selector: 'app-mydetails',
@@ -10,6 +11,7 @@ import { DatePipe } from '@angular/common';
 })
 
 export class MydetailsComponent implements OnInit{
+  
 employeeId : string='';
 
 employee: any;
@@ -21,7 +23,7 @@ myDetails:boolean = false;
 
 
 
-constructor(private employeeService: EmpDataService,private datePipe: DatePipe,private router: Router) {
+constructor(private employeeService: EmpDataService,private datePipe: DatePipe,private router: Router,public dataSer:server) {
  }
 ngOnInit(): void {
  this.employeeId = this.employeeService.getId();
@@ -40,6 +42,7 @@ ngOnInit(): void {
       console.error(error);
     }
   )}
+  this.dataSer.setProfileObs(true);
 }
 }
 
