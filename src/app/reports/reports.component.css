@@ -369,5 +369,21 @@
   .btn {
 
     background-color: rgb(50, 122, 169);
+    margin-right: -40px;
+  }
+  .btn1{
+    background-color: rgb(50, 122, 169);
+    color: white;
+  }
+  .sticky-header {
+
+    position: sticky;
+   top: 0;
+
+    color:white;
+
+    background-color: rgb(50, 122, 169);
+
+    z-index: 1;
 
   }

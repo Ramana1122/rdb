@@ -6,7 +6,7 @@
       <div>
       <h4 style="text-align: center;">My Reportees</h4>
     </div>
-      <div style="display: flex; justify-content: center;margin-left: 120vh;">
+      <div style="display: flex; justify-content: center;margin-left: 150px;">
         <button (click)="downloadEmployeeDetails()" class="btn btn-primary btn-sm"data-bs-toggle="tooltip" data-bs-placement="top" title="Print details"><i class="fas fa-print"></i></button>
       </div>
     </div>
@@ -29,13 +29,13 @@
               {{ employee.Employee_MailId}}</td>
             <td>
                 <div style="display: flex; justify-content: center;">
-              <button (click)="openpop(employee['EmployeeCode'])" class="btn btn-primary btn-sm"data-bs-toggle="tooltip" data-bs-placement="top" title="View employee details">
+              <button (click)="openpop(employee['EmployeeCode'])" class="btn1  btn-sm"data-bs-toggle="tooltip" data-bs-placement="top" title="View employee details">
                 <i class="fa-solid fa-eye"></i></button>
                 </div>
             </td>
             <td>
                <div style="display: flex; justify-content: center;">
-               <button (click)="openpop1(employee['EmployeeCode'])" class="btn btn-primary btn-sm"data-bs-toggle="tooltip" data-bs-placement="top" title="Edit employee details"><i class="fas fa-user-pen"></i></button>
+               <button (click)="openpop1(employee['EmployeeCode'])" class="btn1 btn-sm"data-bs-toggle="tooltip" data-bs-placement="top" title="Edit employee details"><i class="fas fa-user-pen"></i></button>
                </div>
             </td>
           </tr>
